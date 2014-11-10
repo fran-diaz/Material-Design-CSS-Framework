@@ -1,11 +1,3 @@
-<?php header("Content-type: text/css; charset: UTF-8"); 
-$lmarged = "15";
-$marged = "30";
-$lpadded = "15";
-$padded = "30";
-include(ROOT_PATH.'css/base2_2.i');
-?>
-
 /* Text colors: */
 .red {color:#f44336}
 .red50 {color:#ffebee}
