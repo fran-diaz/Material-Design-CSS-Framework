@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="Content-Style-Type" content="text/css" />
         <!-- Desired CSS styles file to test -->
-        <link href="test.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
         
         <!-- Required styles and javascript to beautifull testing -->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
         <style type="text/css">
-            body{background:#f0f0f0;}
-            nav {margin:0 30px;width:calc(100% - 60px);}
-            nav a{display:inline-block;line-height:20px;padding:0 3px;color:#232323;background:#f0f0f0;border:1px solid #ccc;text-transform:capitalize;}
-            nav a.active, nav a:hover{background:#232323;color:#f0f0f0;}
-            section{background:#fff;margin:0 30px;width:calc(100% - 60px);border:1px solid #ccc;}
+            body{background:#fafafa;}
+            nav {margin:30px 30px 0;width:calc(100% - 60px);display:table;border-collapse: collapse;box-sizing:border-box;}
+            nav a{display:table-cell;line-height:30px;padding:0 10px;color:#232323;background:#e5e5e5;border:1px solid #ccc;font-family:'Open Sans';font-size:0.75rem;font-weight:700;text-transform:uppercase;}
+            nav a.active, nav a:hover{background:#232323;color:#e0e0e0;text-decoration:none;}
+            section{background:#fff;margin:0 30px 30px;width:calc(100% - 60px);border:1px solid #ccc;border-top:0;box-sizing:border-box;}
             section:before, section:after {display: table;content: "";}
             section:after {clear: both;}
             .elements_group{position:relative;padding-left:20px;width:100%;height:auto;min-height:100px;box-sizing: border-box;border-bottom:1px solid #ccc;}
@@ -30,6 +30,7 @@
             .color{float:left;height:40px;line-height:40px;width:100%;text-indent:10px;}
             .color:nth-child(n+7){color:#fff;}
             .color:nth-child(n+12){color:#232323;}
+            .left{float:left;}
         </style>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -71,15 +72,15 @@
     <body>
         <section id="grids">
             <div class="elements_group" data-name="grid sizes">
-                <div class="col1">960</div>
-                <div class="col2 left">480</div><div class="col2 left">480</div>
-                <div class="col3 left">320</div><div class="col23 left">640</div>
-                <div class="col4 left">240</div><div class="col34 left">720</div>
-                <div class="col24 left">480</div><div class="col4 left">240</div><div class="col4 left">240</div>
-                <div class="col5 left">192</div><div class="col45 left">768</div>
-                <div class="col25 left">384</div><div class="col35 left">576</div>
-                <div class="col6 left"></div><div class="col56 left"></div>
-                <div class="col46 left"></div><div class="col26 left"></div>
+                <div class="col1">960px</div>
+                <div class="col2 left">480px</div><div class="col2 left">480px</div>
+                <div class="col3 left">320px</div><div class="col23 left">640px</div>
+                <div class="col4 left">240px</div><div class="col34 left">720px</div>
+                <div class="col24 left">480px</div><div class="col4 left">240px</div><div class="col4 left">240</div>
+                <div class="col5 left">192px</div><div class="col45 left">768px</div>
+                <div class="col25 left">384px</div><div class="col35 left">576px</div>
+                <div class="col6 left">160px</div><div class="col56 left">800px</div>
+                <div class="col46 left">640px</div><div class="col26 left">320px</div>
             </div>
         </section>
         <section id="text">
@@ -105,7 +106,12 @@
                 <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit.  Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
             </div>
             <div class="elements_group" data-name="Preformed paragraphs">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                    fermentum et. <code>Inline code example</code> Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                    fringilla. Cras commodo molestie neque, at sagittis <span class="label">Example label</span> eros porttitor quis. Quisque sagittis ac mauris non 
+                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
                 <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
+                <pre><code><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></code></pre>
                 <code><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></code>
             </div>
             <div class="elements_group" data-name="Quotation">
@@ -562,67 +568,72 @@
             </div>
         </section>
         <section id="images">
-            <img src="https://www.google.com/images/srpr/logo11w.png" alt="An img" />
-            <hr />
-            <p><img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. <img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" /> Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-            
+            <div class="elements_group" data-name="Images">
+                <img src="https://www.google.com/images/srpr/logo11w.png" alt="An example img" width="200" />
+                <img src="https://www.google.com/images/srpr/logo11w.png" class="thumbnail" alt="An example img" width="200" />
+                <img src="https://www.google.com/images/srpr/logo11w.png" class="photo" alt="An example img" width="200" />
+            </div>
+            <div class="elements_group" data-name="Picture">
+                <picture>
+                    <source media="(min-width: 64em)" src="https://www.google.com/images/srpr/logo11w.png">
+                    <source media="(min-width: 37.5em)" src="https://www.google.com/images/srpr/logo11w.png">
+                    <source src="https://www.google.com/images/srpr/logo11w.png">
+                    <img src="https://www.google.com/images/srpr/logo11w.png" alt="This picture loads on non-supporting browsers.">
+                </picture>
+            </div>
+            <div class="elements_group" data-name="Inline images">
+                <p><img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" width="200" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                    fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                    fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                    fermentum et. <img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" width="200" /> Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                    fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+            </div>
         </section>
         <section id="tables">
-            <table cellspacing="0" cellpadding="0">
-                <tr>
-                    <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-                </tr>
-                <tr>
-                    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-                <tr class="even">
-                    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-                <tr>
-                    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                </tr>
-            </table>
+            <div class="elements_group" data-name="Independent table">
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+                    </tr>
+                    <tr>
+                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+                    </tr>
+                    <tr>
+                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+                    </tr>
+                </table>
+            </div>
         </section>
         <section id="general_css_classes">
-            <code>
-            .hide { display: none }
-            .hidden { display: none }
-            .show { display: block }
-            .invisible { visibility: hidden }
-            .wrapper { width: 960px; margin-left: auto; margin-right: auto; *zoom: 1 }
-            .left { float:left }
-            .right { float:right }
-            .clear { clear:both }
-            .center { text-align:center }
-            img.foto { border:4px solid #f4f4f4;outline:1px solid #ddd }
-            .lpadded{padding:10px}
-            .padded{padding:20px}
-            .lmarged{margin:10px 0 0 10px}
-            .marged{margin:20px 0 0 20px}
-            
-            .col1, .col2, .col3, .col23, .col4, .col24, .col34, .col5, .col25, .col35, .col45
-            .roundedN
-            .btn
-            .disabled
-            .btn-primary: añade al botón básico un gradiente azul oscuro.
-            .btn-info: añade al botón básico un gradiente azul claro.
-            .btn-success: añade al botón básico un gradiente verde.
-            .btn-warning: añade al botón básico un gradiente naranja.
-            .btn-danger: añade al botón básico un gradiente rojo.
-            .btn-inverse: añade al botón básico un color negro.
-            .btn-large: añade al botón básico un tamaño grande.
-            .btn-small: añade al botón básico un tamaño pequeño.
-            .btn-mini: añade al botón básico un tamaño mini.
-            .btn-toolbar: establece para un grupo de botones margenes superior e inferior de 9px.
-            .btn-group: agrupa un conjunto de botones y redondea los bordes de los botones primero y último.
-            </code>
+            <div class="elements_group" data-name="CSS custom classes">
+                <pre><code>
+                .hide { display: none }
+                .hidden { display: none }
+                .show { display: block }
+                .invisible { visibility: hidden }
+                .wrapper { width: 960px; margin-left: auto; margin-right: auto; *zoom: 1 }
+                .left { float:left }
+                .right { float:right }
+                .clear { clear:both }
+                .center { text-align:center }
+                img.foto { border:4px solid #f4f4f4;outline:1px solid #ddd }
+                .lpadded{padding:10px}
+                .padded{padding:20px}
+                .lmarged{margin:10px 0 0 10px}
+                .marged{margin:20px 0 0 20px}
+
+                .col1, .col2, .col3, .col23, .col4, .col24, .col34, .col5, .col25, .col35, .col45
+                .roundedN
+                .btn
+                .disabled
+                </code></pre>
+            </div>
         </section>
         <section id="specific_styles">
             

@@ -1,3 +1,95 @@
+/* Robot font */
+@import url(http://fonts.googleapis.com/css?family=RobotoDraft:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+/* Reset styles ! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+button, input[type="submit"] {-webkit-font-smoothing:antialiased;font-size:1em;font-weight:bold;line-height:1em;}
+
+/* General */
+html,body{color:#333;font-family:"RobotoDraft","Roboto",sans-serif;font-size:1em;-webkit-font-smoothing:antialiased;line-height:1em;text-rendering:optimizeLegibility;font-size:1em;line-height:1em;color:#232323;background:#f9f9f9}
+h1,h2,h3,h4,h5,h6{font-family:"RobotoDraft","Roboto",sans-serif;margin:0;text-rendering:optimizeLegibility}
+h1{font-size:2.25em}
+h2{font-size:2em}
+h3{font-size:1.75em}
+h4{font-size:1.5em}
+h5{font-size:1.25em}
+h6{font-size:1em}
+p{margin:0 0 .5em}
+a{color:#0277bb;text-decoration:none;-webkit-transition:color .1s linear;-moz-transition:color .1s linear;transition:color .1s linear}
+a:hover{color:#01476f}
+a:active,a:focus{color:#01476f}
+hr{border-bottom:1px solid rgba(0,0,0,0.12);border-left:0;border-right:0;border-top:0;margin:1em 0}
+img{margin:0;max-width:100%}
+abbr,acronym{border-bottom:1px dotted #DDD;cursor:help}
+address{display:block;margin:0 0 .5em}
+hgroup{margin-bottom:.5em}
+del{color:#595959}
+blockquote{border-left:2px solid #DDD;color:#595959;margin:1em 0;padding-left:.5em}
+cite{color:#737373;font-style:italic}
+cite:before{content:'\2014 \00A0'}
+fieldset{background:#f7f7f7;border:1px solid #DDD;margin:0 0 .5em 0;padding:1em}
+input,label,select{display:block;font-family:"RobotoDraft","Roboto",sans-serif;font-size:1em}
+label{font-weight:bold;margin-bottom:.25em}
+label.required:after{content:"*"}
+label abbr{display:none}
+textarea,input[type="email"],input[type="number"],input[type="password"],input[type="search"],input[type="tel"],input[type="text"],input[type="url"],input[type="color"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="time"],input[type="week"],select[multiple=multiple]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:border-color;-moz-transition:border-color;transition:border-color;background-color:white;border-radius:.1875em;border:1px solid #DDD;box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);font-family:"RobotoDraft","Roboto",sans-serif;font-size:1em;margin-bottom:.5em;padding:.33333em .33333em;width:100%}
+textarea:hover,input[type="email"]:hover,input[type="number"]:hover,input[type="password"]:hover,input[type="search"]:hover,input[type="tel"]:hover,input[type="text"]:hover,input[type="url"]:hover,input[type="color"]:hover,input[type="date"]:hover,input[type="datetime"]:hover,input[type="datetime-local"]:hover,input[type="month"]:hover,input[type="time"]:hover,input[type="week"]:hover,select[multiple=multiple]:hover{border-color:#c4c4c4}
+textarea:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="text"]:focus,input[type="url"]:focus,input[type="color"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,select[multiple=multiple]:focus{border-color:#477dca;box-shadow:inset 0 1px 3px rgba(0,0,0,0.06),0 0 5px rgba(55,112,192,0.7)}
+textarea{resize:vertical}
+input[type="search"]{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}
+input[type="checkbox"],input[type="radio"]{display:inline;margin-right:.25em}
+input[type="file"]{width:100%}
+select{width:auto;max-width:100%;margin-bottom:1em}
+button,input[type="submit"]{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;cursor:pointer;user-select:none;vertical-align:middle;white-space:nowrap}
+table{border-collapse:collapse;margin:.5em 0;table-layout:fixed;width:100%}
+th{border-bottom:1px solid #b7b7b7;font-weight:bold;padding:.5em 0;text-align:left}
+td{border-bottom:1px solid #DDD;padding:.5em 0}
+tr,td,th{vertical-align:middle}
+ul,ol{margin:0;padding:0}
+dl{line-height:1em;margin-bottom:.5em}
+dl dt{font-weight:bold;margin-top:.5em}
+dl dd{margin:0}
+
 /* Text colors: */
 .red {color:#f44336}
 .red50 {color:#ffebee}
@@ -551,3 +643,388 @@
 .blue-grey900_bg {background:#263238}
 .black_bg {background:#000000}
 .white_bg {background:#ffffff}
+
+/*Grid system*/
+.col1, .col2, .col3, .col23, .col4, .col24, .col34, .col5, .col25, .col35, .col45, .col6, .col26, .col36, .col46, .col56{width:100%;height:auto;}
+.col1{width:100%;}
+.col2{width:50%;}
+.col3{width:33.3333333333%;}
+.col4{width:25%;}
+.col5{width:20%;}
+.col6{width:16.6666666666%;}
+.col23{width:66.6666666666%;}
+.col24{width:50%;}
+.col34{width:75%;}
+.col25{width:40%;}
+.col35{width:60%;}
+.col45{width:80%;}
+.col26{width:33.3333333333%;}
+.col36{width:50%;}
+.col46{width:66.6666666666%;}
+.col56{width:83.3333333333%;}
+
+.col1.padded{<?=$_ITE->css->calc('width','100% - '.($padded*2).'px')?>}
+.col2.padded{<?=$_ITE->css->calc('width','50% - '.($padded*2).'px')?>}
+.col3.padded{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2).'px')?>;}
+.col4.padded{<?=$_ITE->css->calc('width','25% - '.($padded*2).'px')?>;}
+.col5.padded{<?=$_ITE->css->calc('width','20% - '.($padded*2).'px')?>;}
+.col6.padded{<?=$_ITE->css->calc('width','16.6666666666% - '.($padded*2).'px')?>;}
+.col23.padded{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2).'px')?>;}
+.col24.padded{<?=$_ITE->css->calc('width','50% - '.($padded*2).'px')?>;}
+.col34.padded{<?=$_ITE->css->calc('width','75% - '.($padded*2).'px')?>;}
+.col25.padded{<?=$_ITE->css->calc('width','40% - '.($padded*2).'px')?>;}
+.col35.padded{<?=$_ITE->css->calc('width','60% - '.($padded*2).'px')?>;}
+.col45.padded{<?=$_ITE->css->calc('width','80% - '.($padded*2).'px')?>;}
+.col26.padded{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2).'px')?>;}
+.col36.padded{<?=$_ITE->css->calc('width','50% - '.($padded*2).'px')?>;}
+.col46.padded{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2).'px')?>;}
+.col56.padded{<?=$_ITE->css->calc('width','83.3333333333% - '.($padded*2).'px')?>;}
+
+.col1.lpadded{<?=$_ITE->css->calc('width','100% - '.($lpadded*2).'px')?>}
+.col2.lpadded{<?=$_ITE->css->calc('width','50% - '.($lpadded*2).'px')?>}
+.col3.lpadded{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2).'px')?>;}
+.col4.lpadded{<?=$_ITE->css->calc('width','25% - '.($lpadded*2).'px')?>;}
+.col5.lpadded{<?=$_ITE->css->calc('width','20% - '.($lpadded*2).'px')?>;}
+.col6.lpadded{<?=$_ITE->css->calc('width','16.6666666666% - '.($lpadded*2).'px')?>;}
+.col23.lpadded{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2).'px')?>;}
+.col24.lpadded{<?=$_ITE->css->calc('width','50% - '.($lpadded*2).'px')?>;}
+.col34.lpadded{<?=$_ITE->css->calc('width','75% - '.($lpadded*2).'px')?>;}
+.col25.lpadded{<?=$_ITE->css->calc('width','40% - '.($lpadded*2).'px')?>;}
+.col35.lpadded{<?=$_ITE->css->calc('width','60% - '.($lpadded*2).'px')?>;}
+.col45.lpadded{<?=$_ITE->css->calc('width','80% - '.($lpadded*2).'px')?>;}
+.col26.lpadded{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2).'px')?>;}
+.col36.lpadded{<?=$_ITE->css->calc('width','50% - '.($lpadded*2).'px')?>;}
+.col46.lpadded{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2).'px')?>;}
+.col56.lpadded{<?=$_ITE->css->calc('width','83.3333333333% - '.($lpadded*2).'px')?>;}
+
+.col1.marged{<?=$_ITE->css->calc('width','100% - '.($marged*2).'px')?>}
+.col2.marged{<?=$_ITE->css->calc('width','50% - '.($marged*1.5).'px')?>}
+.col3.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($marged*1.3333333333).'px')?>;}
+.col4.marged{<?=$_ITE->css->calc('width','25% - '.($marged*1.25).'px')?>;}
+.col5.marged{<?=$_ITE->css->calc('width','20% - '.($marged*1.2).'px')?>;}
+.col6.marged{<?=$_ITE->css->calc('width','16.6666666666% - '.($marged*1.1666666666).'px')?>;}
+.col23.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($marged*1.6666666666).'px')?>;}
+.col24.marged{<?=$_ITE->css->calc('width','50% - '.($marged*1.5).'px')?>;}
+.col34.marged{<?=$_ITE->css->calc('width','75% - '.($marged*1.75).'px')?>;}
+.col25.marged{<?=$_ITE->css->calc('width','40% - '.($marged*1.4).'px')?>;}
+.col35.marged{<?=$_ITE->css->calc('width','60% - '.($marged*1.6).'px')?>;}
+.col45.marged{<?=$_ITE->css->calc('width','80% - '.($marged*1.8).'px')?>;}
+.col26.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($marged*1.3333333333).'px')?>;}
+.col36.marged{<?=$_ITE->css->calc('width','50% - '.($marged*1.5).'px')?>;}
+.col46.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($marged*1.6666666666).'px')?>;}
+.col56.marged{<?=$_ITE->css->calc('width','83.3333333333% - '.($marged*1.8333333333).'px')?>;}
+
+.col1.lmarged{<?=$_ITE->css->calc('width','100% - '.($lmarged*2).'px')?>}
+.col2.lmarged{<?=$_ITE->css->calc('width','50% - '.($lmarged*1.5).'px')?>}
+.col3.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lmarged*1.3333333333).'px')?>;}
+.col4.lmarged{<?=$_ITE->css->calc('width','25% - '.($lmarged*1.25).'px')?>;}
+.col5.lmarged{<?=$_ITE->css->calc('width','20% - '.($lmarged*1.2).'px')?>;}
+.col6.lmarged{<?=$_ITE->css->calc('width','16.6666666666% - '.($lmarged*1.1666666666).'px')?>;}
+.col23.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lmarged*1.6666666666).'px')?>;}
+.col24.lmarged{<?=$_ITE->css->calc('width','50% - '.($lmarged*1.5).'px')?>;}
+.col34.lmarged{<?=$_ITE->css->calc('width','75% - '.($lmarged*1.75).'px')?>;}
+.col25.lmarged{<?=$_ITE->css->calc('width','40% - '.($lmarged*1.4).'px')?>;}
+.col35.lmarged{<?=$_ITE->css->calc('width','60% - '.($lmarged*1.6).'px')?>;}
+.col45.lmarged{<?=$_ITE->css->calc('width','80% - '.($lmarged*1.8).'px')?>;}
+.col26.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lmarged*1.3333333333).'px')?>;}
+.col36.lmarged{<?=$_ITE->css->calc('width','50% - '.($lmarged*1.5).'px')?>;}
+.col46.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lmarged*1.6666666666).'px')?>;}
+.col56.lmarged{<?=$_ITE->css->calc('width','83.3333333333% - '.($lmarged*1.8333333333).'px')?>;}
+
+.col1.padded.marged{<?=$_ITE->css->calc('width','100% - '.($padded*2+$marged*2).'px')?>}
+.col2.padded.marged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$marged*1.5).'px')?>}
+.col3.padded.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2+$marged*1.3333333333).'px')?>;}
+.col4.padded.marged{<?=$_ITE->css->calc('width','25% - '.($padded*2+$marged*1.25).'px')?>;}
+.col5.padded.marged{<?=$_ITE->css->calc('width','20% - '.($padded*2+$marged*1.2).'px')?>;}
+.col6.padded.marged{<?=$_ITE->css->calc('width','16.6666666666% - '.($padded*2+$marged*1.1666666666).'px')?>;}
+.col23.padded.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2+$marged*1.6666666666).'px')?>;}
+.col24.padded.marged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$marged*1.5).'px')?>;}
+.col34.padded.marged{<?=$_ITE->css->calc('width','75% - '.($padded*2+$marged*1.75).'px')?>;}
+.col25.padded.marged{<?=$_ITE->css->calc('width','40% - '.($padded*2+$marged*1.4).'px')?>;}
+.col35.padded.marged{<?=$_ITE->css->calc('width','60% - '.($padded*2+$marged*1.6).'px')?>;}
+.col45.padded.marged{<?=$_ITE->css->calc('width','80% - '.($padded*2+$marged*1.8).'px')?>;}
+.col26.padded.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2+$marged*1.3333333333).'px')?>;}
+.col36.padded.marged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$marged*1.5).'px')?>;}
+.col46.padded.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2+$marged*1.6666666666).'px')?>;}
+.col56.padded.marged{<?=$_ITE->css->calc('width','83.3333333333% - '.($padded*2+$marged*1.8333333333).'px')?>;}
+
+.col1.lpadded.lmarged{<?=$_ITE->css->calc('width','100% - '.($lpadded*2+$lmarged*2).'px')?>}
+.col2.lpadded.lmarged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$lmarged*1.5).'px')?>}
+.col3.lpadded.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2+$lmarged*1.3333333333).'px')?>;}
+.col4.lpadded.lmarged{<?=$_ITE->css->calc('width','25% - '.($lpadded*2+$lmarged*1.25).'px')?>;}
+.col5.lpadded.lmarged{<?=$_ITE->css->calc('width','20% - '.($lpadded*2+$lmarged*1.2).'px')?>;}
+.col6.lpadded.lmarged{<?=$_ITE->css->calc('width','16.6666666666% - '.($lpadded*2+$lmarged*1.1666666666).'px')?>;}
+.col23.lpadded.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2+$lmarged*1.6666666666).'px')?>;}
+.col24.lpadded.lmarged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$lmarged*1.5).'px')?>;}
+.col34.lpadded.lmarged{<?=$_ITE->css->calc('width','75% - '.($lpadded*2+$lmarged*1.75).'px')?>;}
+.col25.lpadded.lmarged{<?=$_ITE->css->calc('width','40% - '.($lpadded*2+$lmarged*1.4).'px')?>;}
+.col35.lpadded.lmarged{<?=$_ITE->css->calc('width','60% - '.($lpadded*2+$lmarged*1.6).'px')?>;}
+.col45.lpadded.lmarged{<?=$_ITE->css->calc('width','80% - '.($lpadded*2+$lmarged*1.8).'px')?>;}
+.col26.lpadded.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2+$lmarged*1.3333333333).'px')?>;}
+.col36.lpadded.lmarged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$lmarged*1.5).'px')?>;}
+.col46.lpadded.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2+$lmarged*1.6666666666).'px')?>;}
+.col56.lpadded.lmarged{<?=$_ITE->css->calc('width','83.3333333333% - '.($lpadded*2+$lmarged*1.8333333333).'px')?>;}
+
+.col1.padded.lmarged{<?=$_ITE->css->calc('width','100% - '.($padded*2+$lmarged*2).'px')?>}
+.col2.padded.lmarged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$lmarged*1.5).'px')?>}
+.col3.padded.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2+$lmarged*1.3333333333).'px')?>;}
+.col4.padded.lmarged{<?=$_ITE->css->calc('width','25% - '.($padded*2+$lmarged*1.25).'px')?>;}
+.col5.padded.lmarged{<?=$_ITE->css->calc('width','20% - '.($padded*2+$lmarged*1.2).'px')?>;}
+.col6.padded.lmarged{<?=$_ITE->css->calc('width','16.6666666666% - '.($padded*2+$lmarged*1.1666666666).'px')?>;}
+.col23.padded.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2+$lmarged*1.6666666666).'px')?>;}
+.col24.padded.lmarged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$lmarged*1.5).'px')?>;}
+.col34.padded.lmarged{<?=$_ITE->css->calc('width','75% - '.($padded*2+$lmarged*1.75).'px')?>;}
+.col25.padded.lmarged{<?=$_ITE->css->calc('width','40% - '.($padded*2+$lmarged*1.4).'px')?>;}
+.col35.padded.lmarged{<?=$_ITE->css->calc('width','60% - '.($padded*2+$lmarged*1.6).'px')?>;}
+.col45.padded.lmarged{<?=$_ITE->css->calc('width','80% - '.($padded*2+$lmarged*1.8).'px')?>;}
+.col26.padded.lmarged{<?=$_ITE->css->calc('width','33.3333333333% - '.($padded*2+$lmarged).'px')?>;}
+.col36.padded.lmarged{<?=$_ITE->css->calc('width','50% - '.($padded*2+$lmarged*1.5).'px')?>;}
+.col46.padded.lmarged{<?=$_ITE->css->calc('width','66.6666666666% - '.($padded*2+$lmarged*1.6666666666).'px')?>;}
+.col56.padded.lmarged{<?=$_ITE->css->calc('width','83.3333333333% - '.($padded*2+$lmarged*1.8333333333).'px')?>;}
+
+.col1.lpadded.marged{<?=$_ITE->css->calc('width','100% - '.($lpadded*2+$marged*2).'px')?>}
+.col2.lpadded.marged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$marged*1.5).'px')?>}
+.col3.lpadded.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2+$marged*1.3333333333).'px')?>;}
+.col4.lpadded.marged{<?=$_ITE->css->calc('width','25% - '.($lpadded*2+$marged*1.25).'px')?>;}
+.col5.lpadded.marged{<?=$_ITE->css->calc('width','20% - '.($lpadded*2+$marged*1.2).'px')?>;}
+.col6.lpadded.marged{<?=$_ITE->css->calc('width','16.6666666666% - '.($lpadded*2+$marged*1.1666666666).'px')?>;}
+.col23.lpadded.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2+$marged*1.6666666666).'px')?>;}
+.col24.lpadded.marged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$marged*1.5).'px')?>;}
+.col34.lpadded.marged{<?=$_ITE->css->calc('width','75% - '.($lpadded*2+$marged*1.75).'px')?>;}
+.col25.lpadded.marged{<?=$_ITE->css->calc('width','40% - '.($lpadded*2+$marged*1.4).'px')?>;}
+.col35.lpadded.marged{<?=$_ITE->css->calc('width','60% - '.($lpadded*2+$marged*1.6).'px')?>;}
+.col45.lpadded.marged{<?=$_ITE->css->calc('width','80% - '.($lpadded*2+$marged*1.8).'px')?>;}
+.col26.lpadded.marged{<?=$_ITE->css->calc('width','33.3333333333% - '.($lpadded*2+$marged*1.3333333333).'px')?>;}
+.col36.lpadded.marged{<?=$_ITE->css->calc('width','50% - '.($lpadded*2+$marged*1.5).'px')?>;}
+.col46.lpadded.marged{<?=$_ITE->css->calc('width','66.6666666666% - '.($lpadded*2+$marged*1.6666666666).'px')?>;}
+.col56.lpadded.marged{<?=$_ITE->css->calc('width','83.3333333333% - '.($lpadded*2+$marged*1.8333333333).'px')?>;}
+
+.row1, .row2, .row3, .row23, .row4, .row24, .row34, .row5, .row25, .row35, .row45, .row6, .row26, .row36, .row46, .row56{height:100%;}
+.row1{height:100%;}
+.row2{height:50%;}
+.row3{height:33.3333333333%;}
+.row4{height:25%;}
+.row5{height:20%;}
+.row6{height:16.6666666666%;}
+.row23{height:66.6666666666%;}
+.row24{height:50%;}
+.row34{height:75%;}
+.row25{height:40%;}
+.row35{height:60%;}
+.row45{height:80%;}
+.row26{height:33.3333333333%;}
+.row36{height:50%;}
+.row46{height:66.6666666666%;}
+.row56{height:83.3333333333%;}
+
+.row1.padded{<?=$_ITE->css->calc('height','100% - '.($padded*2).'px')?>}
+.row2.padded{<?=$_ITE->css->calc('height','50% - '.($padded*2).'px')?>}
+.row3.padded{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2).'px')?>;}
+.row4.padded{<?=$_ITE->css->calc('height','25% - '.($padded*2).'px')?>;}
+.row5.padded{<?=$_ITE->css->calc('height','20% - '.($padded*2).'px')?>;}
+.row6.padded{<?=$_ITE->css->calc('height','16.6666666666% - '.($padded*2).'px')?>;}
+.row23.padded{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2).'px')?>;}
+.row24.padded{<?=$_ITE->css->calc('height','50% - '.($padded*2).'px')?>;}
+.row34.padded{<?=$_ITE->css->calc('height','75% - '.($padded*2).'px')?>;}
+.row25.padded{<?=$_ITE->css->calc('height','40% - '.($padded*2).'px')?>;}
+.row35.padded{<?=$_ITE->css->calc('height','60% - '.($padded*2).'px')?>;}
+.row45.padded{<?=$_ITE->css->calc('height','80% - '.($padded*2).'px')?>;}
+.row26.padded{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2).'px')?>;}
+.row36.padded{<?=$_ITE->css->calc('height','50% - '.($padded*2).'px')?>;}
+.row46.padded{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2).'px')?>;}
+.row56.padded{<?=$_ITE->css->calc('height','83.3333333333% - '.($padded*2).'px')?>;}
+
+.row1.lpadded{<?=$_ITE->css->calc('height','100% - '.($lpadded*2).'px')?>}
+.row2.lpadded{<?=$_ITE->css->calc('height','50% - '.($lpadded*2).'px')?>}
+.row3.lpadded{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2).'px')?>;}
+.row4.lpadded{<?=$_ITE->css->calc('height','25% - '.($lpadded*2).'px')?>;}
+.row5.lpadded{<?=$_ITE->css->calc('height','20% - '.($lpadded*2).'px')?>;}
+.row6.lpadded{<?=$_ITE->css->calc('height','16.6666666666% - '.($lpadded*2).'px')?>;}
+.row23.lpadded{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2).'px')?>;}
+.row24.lpadded{<?=$_ITE->css->calc('height','50% - '.($lpadded*2).'px')?>;}
+.row34.lpadded{<?=$_ITE->css->calc('height','75% - '.($lpadded*2).'px')?>;}
+.row25.lpadded{<?=$_ITE->css->calc('height','40% - '.($lpadded*2).'px')?>;}
+.row35.lpadded{<?=$_ITE->css->calc('height','60% - '.($lpadded*2).'px')?>;}
+.row45.lpadded{<?=$_ITE->css->calc('height','80% - '.($lpadded*2).'px')?>;}
+.row26.lpadded{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2).'px')?>;}
+.row36.lpadded{<?=$_ITE->css->calc('height','50% - '.($lpadded*2).'px')?>;}
+.row46.lpadded{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2).'px')?>;}
+.row56.lpadded{<?=$_ITE->css->calc('height','83.3333333333% - '.($lpadded*2).'px')?>;}
+
+.row1.marged{<?=$_ITE->css->calc('height','100% - '.($marged*2).'px')?>}
+.row2.marged{<?=$_ITE->css->calc('height','50% - '.($marged*1.5).'px')?>}
+.row3.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($marged*1.3333333333).'px')?>;}
+.row4.marged{<?=$_ITE->css->calc('height','25% - '.($marged*1.25).'px')?>;}
+.row5.marged{<?=$_ITE->css->calc('height','20% - '.($marged*1.2).'px')?>;}
+.row6.marged{<?=$_ITE->css->calc('height','16.6666666666% - '.($marged*1.1666666666).'px')?>;}
+.row23.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($marged*1.6666666666).'px')?>;}
+.row24.marged{<?=$_ITE->css->calc('height','50% - '.($marged*1.5).'px')?>;}
+.row34.marged{<?=$_ITE->css->calc('height','75% - '.($marged*1.75).'px')?>;}
+.row25.marged{<?=$_ITE->css->calc('height','40% - '.($marged*1.4).'px')?>;}
+.row35.marged{<?=$_ITE->css->calc('height','60% - '.($marged*1.6).'px')?>;}
+.row45.marged{<?=$_ITE->css->calc('height','80% - '.($marged*1.8).'px')?>;}
+.row26.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($marged*1.3333333333).'px')?>;}
+.row36.marged{<?=$_ITE->css->calc('height','50% - '.($marged*1.5).'px')?>;}
+.row46.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($marged*1.6666666666).'px')?>;}
+.row56.marged{<?=$_ITE->css->calc('height','83.3333333333% - '.($marged*1.8333333333).'px')?>;}
+
+.row1.lmarged{<?=$_ITE->css->calc('height','100% - '.($lmarged*2).'px')?>}
+.row2.lmarged{<?=$_ITE->css->calc('height','50% - '.($lmarged*1.5).'px')?>}
+.row3.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lmarged*1.3333333333).'px')?>;}
+.row4.lmarged{<?=$_ITE->css->calc('height','25% - '.($lmarged*1.25).'px')?>;}
+.row5.lmarged{<?=$_ITE->css->calc('height','20% - '.($lmarged*1.2).'px')?>;}
+.row6.lmarged{<?=$_ITE->css->calc('height','16.6666666666% - '.($lmarged*1.1666666666).'px')?>;}
+.row23.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lmarged*1.6666666666).'px')?>;}
+.row24.lmarged{<?=$_ITE->css->calc('height','50% - '.($lmarged*1.5).'px')?>;}
+.row34.lmarged{<?=$_ITE->css->calc('height','75% - '.($lmarged*1.75).'px')?>;}
+.row25.lmarged{<?=$_ITE->css->calc('height','40% - '.($lmarged*1.4).'px')?>;}
+.row35.lmarged{<?=$_ITE->css->calc('height','60% - '.($lmarged*1.6).'px')?>;}
+.row45.lmarged{<?=$_ITE->css->calc('height','80% - '.($lmarged*1.8).'px')?>;}
+.row26.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lmarged*1.3333333333).'px')?>;}
+.row36.lmarged{<?=$_ITE->css->calc('height','50% - '.($lmarged*1.5).'px')?>;}
+.row46.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lmarged*1.6666666666).'px')?>;}
+.row56.lmarged{<?=$_ITE->css->calc('height','83.3333333333% - '.($lmarged*1.8333333333).'px')?>;}
+
+.row1.padded.marged{<?=$_ITE->css->calc('height','100% - '.($padded*2+$marged*2).'px')?>}
+.row2.padded.marged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$marged*1.5).'px')?>}
+.row3.padded.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2+$marged*1.3333333333).'px')?>;}
+.row4.padded.marged{<?=$_ITE->css->calc('height','25% - '.($padded*2+$marged*1.25).'px')?>;}
+.row5.padded.marged{<?=$_ITE->css->calc('height','20% - '.($padded*2+$marged*1.2).'px')?>;}
+.row6.padded.marged{<?=$_ITE->css->calc('height','16.6666666666% - '.($padded*2+$marged*1.1666666666).'px')?>;}
+.row23.padded.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2+$marged*1.6666666666).'px')?>;}
+.row24.padded.marged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$marged*1.5).'px')?>;}
+.row34.padded.marged{<?=$_ITE->css->calc('height','75% - '.($padded*2+$marged*1.75).'px')?>;}
+.row25.padded.marged{<?=$_ITE->css->calc('height','40% - '.($padded*2+$marged*1.4).'px')?>;}
+.row35.padded.marged{<?=$_ITE->css->calc('height','60% - '.($padded*2+$marged*1.6).'px')?>;}
+.row45.padded.marged{<?=$_ITE->css->calc('height','80% - '.($padded*2+$marged*1.8).'px')?>;}
+.row26.padded.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2+$marged*1.3333333333).'px')?>;}
+.row36.padded.marged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$marged*1.5).'px')?>;}
+.row46.padded.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2+$marged*1.6666666666).'px')?>;}
+.row56.padded.marged{<?=$_ITE->css->calc('height','83.3333333333% - '.($padded*2+$marged*1.8333333333).'px')?>;}
+
+.row1.lpadded.lmarged{<?=$_ITE->css->calc('height','100% - '.($lpadded*2+$lmarged*2).'px')?>}
+.row2.lpadded.lmarged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$lmarged*1.5).'px')?>}
+.row3.lpadded.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2+$lmarged*1.3333333333).'px')?>;}
+.row4.lpadded.lmarged{<?=$_ITE->css->calc('height','25% - '.($lpadded*2+$lmarged*1.25).'px')?>;}
+.row5.lpadded.lmarged{<?=$_ITE->css->calc('height','20% - '.($lpadded*2+$lmarged*1.2).'px')?>;}
+.row6.lpadded.lmarged{<?=$_ITE->css->calc('height','16.6666666666% - '.($lpadded*2+$lmarged*1.1666666666).'px')?>;}
+.row23.lpadded.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2+$lmarged*1.6666666666).'px')?>;}
+.row24.lpadded.lmarged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$lmarged*1.5).'px')?>;}
+.row34.lpadded.lmarged{<?=$_ITE->css->calc('height','75% - '.($lpadded*2+$lmarged*1.75).'px')?>;}
+.row25.lpadded.lmarged{<?=$_ITE->css->calc('height','40% - '.($lpadded*2+$lmarged*1.4).'px')?>;}
+.row35.lpadded.lmarged{<?=$_ITE->css->calc('height','60% - '.($lpadded*2+$lmarged*1.6).'px')?>;}
+.row45.lpadded.lmarged{<?=$_ITE->css->calc('height','80% - '.($lpadded*2+$lmarged*1.8).'px')?>;}
+.row26.lpadded.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2+$lmarged*1.3333333333).'px')?>;}
+.row36.lpadded.lmarged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$lmarged*1.5).'px')?>;}
+.row46.lpadded.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2+$lmarged*1.6666666666).'px')?>;}
+.row56.lpadded.lmarged{<?=$_ITE->css->calc('height','83.3333333333% - '.($lpadded*2+$lmarged*1.8333333333).'px')?>;}
+
+.row1.padded.lmarged{<?=$_ITE->css->calc('height','100% - '.($padded*2+$lmarged*2).'px')?>}
+.row2.padded.lmarged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$lmarged*1.5).'px')?>}
+.row3.padded.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2+$lmarged*1.3333333333).'px')?>;}
+.row4.padded.lmarged{<?=$_ITE->css->calc('height','25% - '.($padded*2+$lmarged*1.25).'px')?>;}
+.row5.padded.lmarged{<?=$_ITE->css->calc('height','20% - '.($padded*2+$lmarged*1.2).'px')?>;}
+.row6.padded.lmarged{<?=$_ITE->css->calc('height','16.6666666666% - '.($padded*2+$lmarged*1.1666666666).'px')?>;}
+.row23.padded.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2+$lmarged*1.6666666666).'px')?>;}
+.row24.padded.lmarged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$lmarged*1.5).'px')?>;}
+.row34.padded.lmarged{<?=$_ITE->css->calc('height','75% - '.($padded*2+$lmarged*1.75).'px')?>;}
+.row25.padded.lmarged{<?=$_ITE->css->calc('height','40% - '.($padded*2+$lmarged*1.4).'px')?>;}
+.row35.padded.lmarged{<?=$_ITE->css->calc('height','60% - '.($padded*2+$lmarged*1.6).'px')?>;}
+.row45.padded.lmarged{<?=$_ITE->css->calc('height','80% - '.($padded*2+$lmarged*1.8).'px')?>;}
+.row26.padded.lmarged{<?=$_ITE->css->calc('height','33.3333333333% - '.($padded*2+$lmarged).'px')?>;}
+.row36.padded.lmarged{<?=$_ITE->css->calc('height','50% - '.($padded*2+$lmarged*1.5).'px')?>;}
+.row46.padded.lmarged{<?=$_ITE->css->calc('height','66.6666666666% - '.($padded*2+$lmarged*1.6666666666).'px')?>;}
+.row56.padded.lmarged{<?=$_ITE->css->calc('height','83.3333333333% - '.($padded*2+$lmarged*1.8333333333).'px')?>;}
+
+.row1.lpadded.marged{<?=$_ITE->css->calc('height','100% - '.($lpadded*2+$marged*2).'px')?>}
+.row2.lpadded.marged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$marged*1.5).'px')?>}
+.row3.lpadded.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2+$marged*1.3333333333).'px')?>;}
+.row4.lpadded.marged{<?=$_ITE->css->calc('height','25% - '.($lpadded*2+$marged*1.25).'px')?>;}
+.row5.lpadded.marged{<?=$_ITE->css->calc('height','20% - '.($lpadded*2+$marged*1.2).'px')?>;}
+.row6.lpadded.marged{<?=$_ITE->css->calc('height','16.6666666666% - '.($lpadded*2+$marged*1.1666666666).'px')?>;}
+.row23.lpadded.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2+$marged*1.6666666666).'px')?>;}
+.row24.lpadded.marged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$marged*1.5).'px')?>;}
+.row34.lpadded.marged{<?=$_ITE->css->calc('height','75% - '.($lpadded*2+$marged*1.75).'px')?>;}
+.row25.lpadded.marged{<?=$_ITE->css->calc('height','40% - '.($lpadded*2+$marged*1.4).'px')?>;}
+.row35.lpadded.marged{<?=$_ITE->css->calc('height','60% - '.($lpadded*2+$marged*1.6).'px')?>;}
+.row45.lpadded.marged{<?=$_ITE->css->calc('height','80% - '.($lpadded*2+$marged*1.8).'px')?>;}
+.row26.lpadded.marged{<?=$_ITE->css->calc('height','33.3333333333% - '.($lpadded*2+$marged*1.3333333333).'px')?>;}
+.row36.lpadded.marged{<?=$_ITE->css->calc('height','50% - '.($lpadded*2+$marged*1.5).'px')?>;}
+.row46.lpadded.marged{<?=$_ITE->css->calc('height','66.6666666666% - '.($lpadded*2+$marged*1.6666666666).'px')?>;}
+.row56.lpadded.marged{<?=$_ITE->css->calc('height','83.3333333333% - '.($lpadded*2+$marged*1.8333333333).'px')?>;}
+
+.col1{*zoom: 1;}
+.col1:before, .col1:after {display: table;content: "";}
+.col1:after {clear: both;}
+
+/* Common classes */
+.hide {display:none;}
+.show {display:block;}
+.invisible {visibility:hidden;}
+.wrapper{width: 960px;margin-left:auto;margin-right:auto;*zoom: 1;}
+.wrapper:before, .wrapper:after {display:table;content:"";}
+.wrapper:after {clear:both;}
+.left{float:left;}
+.right{float:right;}
+.center{text-align:center;}
+.no-margin,.no-marged{margin:0;}
+.no-margin-top{margin-top:0;}
+.no-margin-bottom{margin-top:0;}
+.no-margin-left{margin-top:0;}
+.no-margin-right{margin-top:0;}
+.no-padding,.no-padded{padding:0;}
+.no-padding-top{padding-top:0;}
+.no-padding-bottom{padding-top:0;}
+.no-padding-left{padding-top:0;}
+.no-padding-right{padding-top:0;}
+.clear{margin:0;clear:both;}
+.hidden{display:none;}
+.photo{border:4px solid #f4f4f4;outline:1px solid #ddd;}
+.photo.left{margin:0 10px 5px 0;}
+.photo.right{margin:0 0 5px 10px;}
+.padded{padding:<?=$padded?>px;}
+.lpadded{padding:<?=$lpadded?>px;}
+.marged{margin:<?=$marged?>px 0 0 <?=$marged?>px;}
+.lmarged{margin:<?=$lmarged?>px 0 0 <?=$lmarged?>px;}
+.rounded1{-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;}
+.rounded2{-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
+.rounded3{-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.rounded4{-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.rounded5{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.rounded6{-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.rounded7{-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px;}
+.rounded8{-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;}
+.rounded9{-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;}
+.rounded10{-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+
+/************************************ RESPONSIVE LAYOUT **************************************/
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 320px) and (max-width: 479px) {
+    .wrapper{width:300px;margin-left:auto;margin-right:auto;*zoom:1}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .wrapper{width:480px;margin-left:auto;margin-right:auto;*zoom:1}
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .wrapper{width:580px;margin-left:auto;margin-right:auto;*zoom:1}
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .wrapper{width:768px;margin-left:auto;margin-right:auto;*zoom:1}
+}
+
+/* All beyond 960 standar */
+@media only screen and (min-width: 960px) {
+    .wrapper{width:960px;margin-left:auto;margin-right:auto;*zoom:1}
+}
+
+/* All beyond 1220 standar */
+@media only screen and (min-width: 1220px) {
+    .wrapper{width:1220px;margin-left:auto;margin-right:auto;*zoom:1}
+}
