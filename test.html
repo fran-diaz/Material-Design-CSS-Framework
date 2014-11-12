@@ -13,7 +13,7 @@
         <style type="text/css">
             body{background:#fafafa;}
             nav {margin:30px 30px 0;width:calc(100% - 60px);display:table;border-collapse: collapse;box-sizing:border-box;}
-            nav a{display:table-cell;line-height:30px;padding:0 10px;color:#232323;background:#e5e5e5;border:1px solid #ccc;font-family:'Open Sans';font-size:0.75rem;font-weight:700;text-transform:uppercase;}
+            nav a{display:table-cell;line-height:30px;padding:0 10px;color:#232323;background:#e5e5e5;border:1px solid #ccc;font-family:'Open Sans';font-size:0.85rem;font-weight:700;text-transform:uppercase;}
             nav a.active, nav a:hover{background:#232323;color:#e0e0e0;text-decoration:none;}
             section{background:#fff;margin:0 30px 30px;width:calc(100% - 60px);border:1px solid #ccc;border-top:0;box-sizing:border-box;}
             section:before, section:after {display: table;content: "";}
@@ -23,7 +23,7 @@
             .elements_group:before, .elements_group:after {display: table;content: "";}
             .elements_group:after {clear: both;}
             .legend{position:absolute;background:#e5e5e5;box-sizing: border-box;border-right:1px solid #e0e0e0;left:0;top:0;width:20px;overflow:hidden;text-transform:uppercase;}
-            .legend span{position:absolute;padding-right:10px;box-sizing: border-box;top:-20px;/*overflow:hidden;*/height:20px;line-height:20px;text-align:right;display:block;color:#aaaaaa; font-weight:700;font-size:0.85em;font-family:'Open Sans';-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform: rotate(-90deg);-webkit-transform-origin: 100% 100%;-moz-transform-origin: 100% 100%;-ms-transform-origin: 100% 100%;-o-transform-origin: 100% 100%;transform-origin: 100% 100%;}
+            .legend span{position:absolute;padding-right:10px;box-sizing: border-box;top:-20px;/*overflow:hidden;*/height:20px;line-height:20px;text-align:right;display:block;color:#aaaaaa; font-weight:700;font-size:0.7rem;font-family:'Open Sans';-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform: rotate(-90deg);-webkit-transform-origin: 100% 100%;-moz-transform-origin: 100% 100%;-ms-transform-origin: 100% 100%;-o-transform-origin: 100% 100%;transform-origin: 100% 100%;}
             .elements_group:hover .legend{background:#232323;color:#e0e0e0;}
             .colorGroup{float:left;width:16.6666666%;}
             .primary_color{float:left;height:80px;line-height:80px;width:100%;text-indent:10px;color:#fff;}
@@ -137,6 +137,15 @@
                 </ol>
                 <ul>
                     <li>List Item 1</li>
+                    <li><a href="#">List Item 2</a></li>
+                    <li>List Item 3</li>
+                    <li><a href="#">List Item 2</a>
+                        <ul>
+                            <li>List Item 1</li>
+                            <li>List Item 2</li>
+                            <li>List Item 3</li>
+                        </ul>
+                    </li>
                     <li>List Item 2</li>
                     <li>List Item 3</li>
                 </ul>
@@ -561,10 +570,10 @@
                 <input type="checkbox" value="check_2" /> Checkbox 2<br/>
                 <input type="checkbox" value="check_3" /> Checkbox 3<br/>
                 <hr />
-                <input type="button" value="Sample button" />
-                <button type="button">Sample button not input.</button>
-                <input type="reset" value="Reset button" /> 
-                <input type="submit" value="Submit button" />
+                <input type="button" value="Sample button input" />
+                <input type="reset" value="Sample reset input" /> 
+                <input type="submit" value="Sample submit input" />
+                <button type="button">Button tag</button>
             </div>
         </section>
         <section id="images">
@@ -635,8 +644,29 @@
                 </code></pre>
             </div>
         </section>
-        <section id="specific_styles">
-            
+        <section id="custom_styles">
+            <div class="elements_group" data-name="Paragraph alerts">
+                <p class="error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-success"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-info"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+            </div>
         </section>
     </body>
 </html>
