@@ -1,53 +1,54 @@
+function drawRipple(target,e){  
+    var left = e.pageX - target.offset().left;
+    var top = e.pageY - target.offset().top;
+
+    target.append('<div class="ripple" style="top:'+top+'px;left:'+left+'px;"></div>');
+    setTimeout(function(){
+      target.find('.ripple:first-of-type').remove();
+    },1500);
+}
+
 $(document).on('mouseenter','[data-hover-class]',function(e){
-    /*var classes = $(this).data("hover-class").split(" ");
-    for(i=0;i<classes.length;i++){
-        $(this).addClass(classes[i]);
-    }*/
+    $(this).addClass($(this).data('hover-class'));
 });
 
 $(document).on('mouseleave','[data-hover-class]',function(e){
-    var classes = $(this).data("hover-class").split(" ");
-    for(i=0;i<classes.length;i++){
-        $(this).removeClass(classes[i]);
-    }
+    $(this).removeClass($(this).data('hover-class'));
 });
 
 $(document).on('focusin','[data-hover-class]',function(e){
-    var classes = $(this).data("hover-class").split(" ");
-    for(i=0;i<classes.length;i++){
-        $(this).addClass(classes[i]);
-    }
+    $(this).addClass($(this).data('hover-class'));
 });
 
 $(document).on('focusout','[data-hover-class]',function(e){
-    var classes = $(this).data("hover-class").split(" ");
-    for(i=0;i<classes.length;i++){
-        $(this).removeClass(classes[i]);
-    }
+    $(this).removeClass($(this).data('hover-class'));
 });
 
 $(document).on('click','[data-active-class]',function(e){
     target = $(this);
-    classes = target.data("active-class").split(" ");
-    for(i=0;i<classes.length;i++){
-        target.addClass(classes[i]);
-    }
+    target.addClass(target.data('active-class'));
 
     setTimeout(function(){
-        for(i=0;i<classes.length;i++){
-            target.removeClass(classes[i]);
-        }
+        target.removeClass(target.data('active-class'));
     },400);
 });
 
-$(document).on('click','.btn',function(e){
-    target = $(this);    
-    var parentOffset = target.offset();
-    var left = e.pageX - parentOffset.left;
-    var top = e.pageY - parentOffset.top;
+$(document).on('click','.btn,button',function(e){
+    drawRipple($(this),e);
+});
 
-      target.append('<div class="ripple" style="top:'+top+'px;left:'+left+'px;"></div>')
-      setTimeout(function(){
-        target.find('.ripple:first-of-type').remove();
-      },1500);
+$(document).on('mouseenter','.raised',function(e){
+    $(this).prepend('<span class="shadow_overlay"></span>');
+});
+
+$(document).on('mouseleave','.raised',function(e){
+    $(this).find('.shadow_overlay').remove();
+});
+
+$(document).on('focusin','.raised',function(e){
+    $(this).prepend('<span class="shadow_overlay"></span>');
+});
+
+$(document).on('focusout','.raised',function(e){
+    $(this).find('.shadow_overlay').remove();
 });
