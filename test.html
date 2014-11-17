@@ -574,13 +574,13 @@
                     </optgroup>
                 </select>
                 <label>Radio Buttons</label>
-                <input type="radio" value="radio_1" /> Radio 1<br/>
-                <input type="radio" value="radio_2" /> Radio 2<br/>
-                <input type="radio" value="radio_3" /> Radio 3<br/>
+                <input type="radio" value="radio_1" /> <label data-active-class="blue">Radio 1</label><br/>
+                <input type="radio" value="radio_2" /> <label class="red">Radio 2</label><br/>
+                <input type="radio" value="radio_3" /> <label data-hover-class="blue">Radio 3</label><br/>
                 <label>Checkboxes</label>
-                <input type="checkbox" value="check_1" /> Checkbox 1<br/>
-                <input type="checkbox" value="check_2" /> Checkbox 2<br/>
-                <input type="checkbox" value="check_3" /> Checkbox 3<br/>
+                <input type="checkbox" value="check_1" /> <label>Checkbox 1</label><br/>
+                <input type="checkbox" value="check_2" /> <label class="red">Checkbox 2</label><br/>
+                <input type="checkbox" value="check_3" /> <label class="red_bg">Checkbox 3</label>
             </div>
         </section>
         <section id="images">
@@ -652,6 +652,9 @@
             </div>
         </section>
         <section id="custom_styles">
+            <div class="elements_group" data-name="Inputs">
+                <a href="javascript:void(0);" class="btn fab mini red_bg white"><span class="mdi"></span></a>
+            </div>
             <div class="elements_group" data-name="Buttons">
                 <div class="elements_group" data-name=".btn / .flat">
                     <a href="javascript:void(0);" class="btn" data-hover-class="red_bg" data-active-class="green_bg">Sample link</a>
