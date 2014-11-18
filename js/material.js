@@ -1,55 +1,93 @@
-/* Modal */
-function modal_open(titular, subtitular, url, autofill){
-    var img_src = "../img";    
+/* Modal 
+ * 
+ * Events:
+ * - modal_populate: triggered at modal_populate function end
+ * 
+*/
 
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
+    this.css("left", (( $(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+    
+    return this;
+};
+
+jQuery.fn.inside_center = function () {
+    var top = ((this.parent().height() - this.outerHeight()) / 2);
+    var left = (( this.parent().width() - this.outerWidth() ) / 2);
+    this.parent().css("position","relative");
+    this.css("position","absolute");
+    this.css("top", top + "px");
+    this.css("left", left + "px");
+    return this;
+};
+
+function modal_open(title, url, autofill){
     modal_create($('body'));
-    $('#modal_title').html(titular);
-    $('#modal_subtitle').html(subtitular);
-    if(url != "/"){$("div#modal_head").append('<img id="modal_close" src="'+img_src+'/modal_close.png" alt="Cerrar menú flotante" onclick="modal_closer();" />');}
+    if(typeof title === 'string'){
+        $('#modal_title').html(title);
+    }else if(typeof title === 'object'){
+        $('#modal_title').remove();
+        $('#modal_head').prepend(title);
+    }
+    
+    if(url !== "/"){$("#modal_head").append('<span id="modal_close" class="btn fab raised mini mdi" data-hover-class="red_bg white"></span>');}
     modal_populate(url);
-    //modal_center();
 }
 
 function modal_create_back(parent){
-    var total_height = $(document).height();
-    parent.append('<div id="modal_back" style="display:none;position:absolute;height:'+total_height+'px;"></div>');
+    parent.append('<div id="modal_back" style="position:absolute;top:0;left:0;height:100%;width:100%;"></div>');
 }
 
 function modal_create(parent){
-    if(parent.is('body')){modal_create_back(parent);parent = $('#modal_back');}
+    if(parent.is('body')){
+        modal_create_back(parent);
+        parent = $('#modal_back');
+    }
     
-    parent.append('<div id="modal" style="display:none;">\n\
-        <div id="modal_head">\n\
-            <span id="modal_title" class="modal_title_font"></span>\n\
-            <span id="modal_subtitle" class="modal_subtitle_font"></span>\n\
+    parent.append('<div id="modal">\n\
+        <div id="modal_head" class="clearfix">\n\
+            <span id="modal_title"></span>\n\
         </div>\n\
         <div id="modal_body" class="clearfix"></div>\n\
     </div>');
 }
 
 function modal_populate(url){
-    var url_aux = url.split(' #');
-    $.when($.get(url_aux[0], {}, function(data) {
-        if(url_aux[1] === undefined){$("#modal_body").html(data);}
-        else{$("#modal_body").html($(data).find('#'+url_aux[1]));}
-        })
-    ).then(function(){
+    if(!typeof url === 'object'){
+        url_aux = url.split(' #');
+        $.when($.get(url_aux[0], {}, function(data) {
+            if(url_aux[1] === undefined){$("#modal_body").html(data);}
+            else{$("#modal_body").html($(data).find('#'+url_aux[1]));}
+            })
+        ).then(function(){
+            modal_center();
+            $(this).trigger('modalPopulate');
+        });
+    }else{
+        $("#modal_body").html(url);
         modal_center();
-        M.parseMath($('#modal_body').get(0));
-        jscolor.init();
-        if ($('input[name="start_date"]').length >= 1 &&  $('input[name="start_date"]')[0].type !== 'date' ) {$('input[name="start_date"]').datepicker(datepicker_es);}
-        if ($('input[name="end_date"]').length >= 1 && $('input[name="end_date"]')[0].type !== 'date' ) {$('input[name="end_date"]').datepicker(datepicker_es);}
-    });
+        $(this).trigger('modalPopulate');
+    }
+    
 }
 
 function modal_center(){
     if($('#modal').parent().is('#modal_back')){
+        
+        $("#modal_back").fadeIn(400,function(){
+            $("#modal").show('fold',{},400,function(){
+                $('#modal_body input').eq(0).focus();
+            });
+        });
+        $("#modal").center();
         $("#modal").draggable({handle: '#modal_head'});
         $("#modal").resizable();
-        $("#modal_back").fadeIn(400,function(){$("#modal").show('fold',{},400,function(){$('#modal_body input').eq(0).focus();});});
-        $("#modal").center();
     }else{
-        $("#modal").show('fold',{},400,function(){$('#modal_body input').eq(0).focus();});
+        $("#modal").show('fold',{},400,function(){
+            $('#modal_body input').eq(0).focus();
+        });
         $("#modal").inside_center();
     }
 }
@@ -58,6 +96,8 @@ function modal_closer(){
     $("div#modal").remove();
     $("div#modal_back").remove();
 }
+
+$(document).on('click','#modal_close',modal_closer);
 
 /* Ripple */
 function drawRipple(target,e){  
@@ -127,6 +167,8 @@ $(document).on('click','input[type="checkbox"] + label',function(e){
     }
 });
 
+/* ---------------------- */
+
 $(document).on('click','input[type="radio"] + label',function(e){
     if($(this).hasClass('checked')){
         if($(this).data('active-class') !== undefined){
@@ -143,4 +185,12 @@ $(document).on('click','input[type="radio"] + label',function(e){
         $(this).addClass('checked '+$(this).data('active-class'));
         $(this).prev('input[type="radio"]').prop('checked',true);
     }
+});
+
+/* --------------------------------- */
+
+$(document).on('click','.modal-open',function(e){
+    e.preventDefault();
+    
+    modal_open($('<h3>Title</h3>'),$('<p>Lorem ipsum dolor sit amet adepisci elit.<p>'));
 });
