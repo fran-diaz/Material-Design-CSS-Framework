@@ -1,7 +1,7 @@
 /* Modal 
  * 
  * Events:
- * - modal_populate: triggered at modal_populate function end
+ * - modalPopulated: triggered at modal_populate function end
  * 
 */
 
@@ -24,15 +24,24 @@ jQuery.fn.inside_center = function () {
 };
 
 function modal_open(title, url, autofill){
+    modal_close_btn = '<span id="modal_close" title="Close dialog" class="btn fab raised mini mdi" data-hover-class="red_bg white"></span>';
     modal_create($('body'));
+    
     if(typeof title === 'string'){
         $('#modal_title').html(title);
     }else if(typeof title === 'object'){
         $('#modal_title').remove();
         $('#modal_head').prepend(title);
+    }else{
+        $('#modal_head').remove();
     }
     
-    if(url !== "/"){$("#modal_head").append('<span id="modal_close" class="btn fab raised mini mdi" data-hover-class="red_bg white"></span>');}
+    if(url !== "/"){
+        if(typeof title === 'string' || typeof title === 'object'){
+            $("#modal_head").append(modal_close_btn);
+        }
+    }
+    
     modal_populate(url);
 }
 
@@ -62,20 +71,20 @@ function modal_populate(url){
             else{$("#modal_body").html($(data).find('#'+url_aux[1]));}
             })
         ).then(function(){
-            modal_center();
-            $(this).trigger('modalPopulate');
+            $('#modal').trigger('modalPopulated');
+            modal_center(); 
         });
     }else{
         $("#modal_body").html(url);
+        if($('#modal_close').length !== 1){$('#modal_body').prepend(modal_close_btn);}
+        $('#modal').trigger('modalPopulated');
         modal_center();
-        $(this).trigger('modalPopulate');
     }
     
 }
 
 function modal_center(){
     if($('#modal').parent().is('#modal_back')){
-        
         $("#modal_back").fadeIn(400,function(){
             $("#modal").show('fold',{},400,function(){
                 $('#modal_body input').eq(0).focus();
@@ -98,6 +107,7 @@ function modal_closer(){
 }
 
 $(document).on('click','#modal_close',modal_closer);
+$(document).on('click','#modal_back',modal_closer);
 
 /* Ripple */
 function drawRipple(target,e){  
@@ -189,8 +199,19 @@ $(document).on('click','input[type="radio"] + label',function(e){
 
 /* --------------------------------- */
 
-$(document).on('click','.modal-open',function(e){
+$(document).on('click','.basic-modal',function(e){
     e.preventDefault();
     
-    modal_open($('<h3>Title</h3>'),$('<p>Lorem ipsum dolor sit amet adepisci elit.<p>'));
+    modal_open('Basic modal',$('<p>Lorem ipsum dolor sit amet adepisci elit.<p>'));
+});
+
+$(document).on('click','.custom-modal',function(e){
+    e.preventDefault();
+    
+    modal_open(false,$('<p>Lorem ipsum dolor sit amet adepisci elit.<p><div id="modal_actions">test</div>'));
+});
+
+$(document).on('modalPopulated','#modal',function(){
+    var a_height = $('#modal_actions').outerHeight() - parseInt($('#modal_body').css('paddingBottom')) ;
+    $('#modal_actions').before('<div style="height:'+a_height+'px;display:block;" class="clearfix"></div>');
 });

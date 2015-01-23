@@ -1,83 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>CSS Styles test suite</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <meta http-equiv="Content-Style-Type" content="text/css" />
-        <!-- Desired CSS styles file to test -->
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        
-        <!-- Required styles and javascript to beautifull testing -->
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
-        <script src="js/material.js" type="text/javascript"></script>
-        <style type="text/css">
-            body{background:#fafafa;}
-            nav {margin:30px 30px 0;width:calc(100% - 60px);display:table;border-collapse: collapse;box-sizing:border-box;}
-            nav a{display:table-cell;line-height:30px;padding:0 10px;color:#232323;background:#e5e5e5;border:1px solid #ccc;font-family:'Open Sans';font-size:0.85rem;font-weight:700;text-transform:uppercase;}
-            nav a.active, nav a:hover{background:#232323;color:#e0e0e0;text-decoration:none;}
-            section{background:#fff;margin:0 30px 30px;width:calc(100% - 60px);border:1px solid #ccc;border-top:0;box-sizing:border-box;overflow:hidden;}
-            section:before, section:after {display: table;content: "";}
-            section:after {clear: both;}
-            .elements_group{position:relative;padding-left:20px;width:100%;height:auto;min-height:85px;box-sizing: border-box;border-bottom:1px solid #ccc;}
-            .elements_group:last-child{border-bottom:0;}
-            .elements_group:before, .elements_group:after {display: table;content: "";}
-            .elements_group:after {clear: both;}
-            .legend{position:absolute;background:#e5e5e5;box-sizing: border-box;border-right:1px solid #e0e0e0;left:0;top:0;width:20px;overflow:hidden;text-transform:uppercase;}
-            .legend span{position:absolute;padding-right:10px;box-sizing: border-box;top:-20px;/*overflow:hidden;*/height:20px;line-height:20px;text-align:right;display:block;color:#aaaaaa; font-weight:700;font-size:0.7rem;font-family:'Open Sans';-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-o-transform: rotate(-90deg);transform: rotate(-90deg);-webkit-transform-origin: 100% 100%;-moz-transform-origin: 100% 100%;-ms-transform-origin: 100% 100%;-o-transform-origin: 100% 100%;transform-origin: 100% 100%;}
-            .elements_group:hover > .legend{background:#232323;color:#e0e0e0;}
-            .colorGroup{float:left;width:16.6666666%;}
-            .primary_color{float:left;height:80px;line-height:80px;width:100%;text-indent:10px;color:#fff;}
-            .color{float:left;height:40px;line-height:40px;width:100%;text-indent:10px;}
-            .color:nth-child(n+7){color:#fff;}
-            .color:nth-child(n+12){color:#232323;}
-            .left{float:left;}
-        </style>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                sections = $('body > section');
-
-                $('body').prepend('<nav></nav>');
-                sections.each(function(i,el){
-                    name = $(el).attr('id');
-                    anchor_text = name.replace(/_/g,' ');
-                    
-                    $(el).find('.elements_group').each(function(si,sel){
-                        $(sel).prepend('<div class="legend"><span>'+$(sel).attr('data-name')+'</span></div>');
-                        section_height = $(sel).innerHeight();
-                        title_height = $(sel).find('.legend > span').eq(0).outerHeight();
-                        $(sel).find('.legend').css('height',section_height+'px');
-                        $(sel).find('.legend > span').css('left','-'+(section_height-title_height)+'px').css('width',section_height+'px');
-                    });
-                    
-                    $(el).hide();
-                    tabs = $('body > nav a');
-                    $('body > nav').append('<a href="#" class="tab" rel="'+name+'" >'+anchor_text+'</a>');
-                });
-                
-                sections.eq(0).addClass('active').show();
-                tabs.eq(0).addClass('active');
-                
-                // Translate code characters to html entities :)
-                $('code').each(function(i,el){
-                    var value = $(el).html();
-                    var value_encoded = $('<div />').text(value).html();
-                    $(el).html(value_encoded);
-                });
-            });
-
-            $(document).on('click','nav a',function(e){
-                e.preventDefault();
-
-                $('section.active').removeClass('active').hide(300);
-                $('#'+$(this).attr('rel')).addClass('active').show(300);
-                $('nav a.active').removeClass('active');
-                $(this).addClass('active');
-            });
-        </script>
-    </head>
-    <body>
-        <section id="grids">
+<section id="grids">
             <div class="elements_group" data-name="grid sizes">
                 <div class="col1" data-hover-class="blue_bg">960px</div>
                 <div class="col2 left" data-hover-class="blue_bg">480px</div><div class="col2 left" data-hover-class="blue_bg">480px</div>
@@ -90,79 +11,85 @@
                 <div class="col46 left" data-hover-class="blue_bg">640px</div><div class="col26 left" data-hover-class="blue_bg">320px</div>
             </div>
         </section>
-        <section id="text">
-            <div class="elements_group" data-name="Heading types">
-                <h1>H1 Sample heading</h1>
-                <h2>H2 Sample heading</h2>
-                <h3>H3 Sample heading</h3>
-                <h4>H4 Sample heading</h4>
-                <h5>H5 Sample heading</h5>
-                <h6>H6 Sample heading</h6>
-            </div>
-            <div class="elements_group" data-name="Paragraph samples">
-                <h1>H1 Sample heading</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Strong inline text</strong> Pellentesque lacinia sem eros, quis tempus elit 
-                    fermentum et. <small>Small inline text</small>. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                    fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <h2>H2 Sample heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Emphasis example text</em>. Pellentesque lacinia sem eros, quis tempus elit 
-                    fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                    fringilla. <a href="#">Inline link</a>. Cras mondo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p>Lorem <sup>superscript</sup> dolor <sub>subscript</sub> amet, consectetuer adipiscing elit.  Quisque aliquam. <cite>cite</cite>. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p>
-            </div>
-            <div class="elements_group" data-name="Preformed paragraphs">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                    fermentum et. <code>Inline code example</code> Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                    fringilla. Cras commodo molestie neque, at sagittis <span class="label">Example label</span> eros porttitor quis. Quisque sagittis ac mauris non 
-                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></pre>
-                <pre><code><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></code></pre>
-                <code><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. <acronym title="National Basketball Association">NBA</acronym> Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  <abbr title="Avenue">AVE</abbr></p></code>
-            </div>
-            <div class="elements_group" data-name="Quotation">
-                <q cite="https://www.google.com">This is a sort quotation.</q>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <q>Inline sort quotation.</q> Nullam dignissim convallis est.</p>
-                <blockquote>
-                    "This stylesheet is going to help so freaking much." <br />-Blockquote
-                </blockquote>
-            </div>
-            <div class="elements_group" data-name="List types">
-                <dl>
-                    <dt>Definition Title</dt>
-                    <dd>Definition description.</dd>
-                    <dt>Definition Title</dt>
-                    <dd>Definition description.</dd>
-                    <dt>Definition Title</dt>
-                    <dd>Definition description.</dd>
-                </dl>
-                <ol>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                </ol>
-                <ul>
-                    <li>List Item 1</li>
-                    <li><a href="#">List Item 2</a></li>
-                    <li>List Item 3</li>
-                    <li><a href="#">List Item 2</a>
-                        <ul>
-                            <li>List Item 1</li>
-                            <li>List Item 2</li>
-                            <li>List Item 3</li>
-                        </ul>
-                    </li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                </ul>
-            </div>
-            <div class="elements_group" data-name="Other elements">
-                <small>Small text</small>
-                <a href="#wrapper">Standard Anchor / link</a>
+<section id="general_css_classes">
+            <div class="elements_group" data-name="CSS custom classes">
+                <pre><code>
+                .hide { display: none }
+                .hidden { display: none }
+                .show { display: block }
+                .invisible { visibility: hidden }
+                .wrapper { width: 960px; margin-left: auto; margin-right: auto; *zoom: 1 }
+                .left { float:left }
+                .right { float:right }
+                .clear { clear:both }
+                .center { text-align:center }
+                img.foto { border:4px solid #f4f4f4;outline:1px solid #ddd }
+                .lpadded{padding:10px}
+                .padded{padding:20px}
+                .lmarged{margin:10px 0 0 10px}
+                .marged{margin:20px 0 0 20px}
+
+                .col1, .col2, .col3, .col23, .col4, .col24, .col34, .col5, .col25, .col35, .col45
+                .roundedN
+                .btn
+                .disabled
+                </code></pre>
             </div>
         </section>
-        <section id="colours">
+        <section id="custom_styles">
+            <div class="elements_group" data-name="Modals">
+                <a href="javascript:void(0);" class="btn basic-modal">Basic modal</a>
+                <a href="javascript:void(0);" class="btn custom-modal">Custom modal</a>
+            </div>
+            <div class="elements_group" data-name="Buttons">
+                <div class="elements_group" data-name=".btn / .flat">
+                    <a href="javascript:void(0);" class="btn" data-hover-class="red_bg" data-active-class="green_bg">Sample link</a>
+                    <a href="javascript:void(0);" class="btn red">Sample link</a>
+                    <a href="javascript:void(0);" class="btn red_bg white">Sample link</a>
+                </div>
+                <div class="elements_group" data-name=".raised">
+                    <a href="javascript:void(0);" class="btn raised" data-hover-class="red_bg" data-active-class="green_bg">Sample link</a>
+                    <a href="javascript:void(0);" class="btn red raised">Sample link</a>
+                    <a href="javascript:void(0);" class="btn red_bg white raised">Sample link</a>
+                </div>
+                <div class="elements_group" data-name=".fab">
+                    <a href="javascript:void(0);" class="btn fab">F</a>
+                    <a href="javascript:void(0);" class="btn fab red_bg white">F</a>
+                    <a href="javascript:void(0);" class="btn fab mini red_bg white">F</a>
+                    <a href="javascript:void(0);" class="btn fab mini red_bg white"><span class="mdi"></span></a>
+                    <a href="javascript:void(0);" class="btn fab mini"><span class="mdi"></span></a>
+                    <a href="javascript:void(0);" class="btn fab mini" data-hover-class="red"><span class="mdi"></span></a>
+                </div>
+                <div class="elements_group" data-name=".fab.raised">
+                    <a href="javascript:void(0);" class="btn fab raised">F</a>
+                    <a href="javascript:void(0);" class="btn fab red_bg white raised ripple_white">F</a>
+                    <a href="javascript:void(0);" class="btn fab mini red_bg white raised">F</a>
+                </div>
+            </div>
+            <div class="elements_group" data-name="Paragraph alerts">
+                <p class="error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-success" data-hover-class="green_bg white"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-info"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+                <p class="alert alert-error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
+                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
+                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
+                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
+            </div>
+        </section>
+<section id="colours">
             <div class="elements_group" data-name="Color classes">
                 <div class="colorGroup">
                         <div class="red_bg primary_color"><strong>.red</strong> (#f44336)</div>
@@ -483,225 +410,3 @@
                 </div>
             </div>
         </section>
-        <section id="forms">
-            <div class="elements_group" data-name="Buttons">
-                <button type="button">Button tag</button>
-                <input type="button" value="Sample button input" />
-                <input type="reset" value="Sample reset input" /> 
-                <input type="submit" value="Sample submit input" />
-            </div>
-            <div class="elements_group" data-name="Fieldset">
-                <fieldset>
-                    <legend>Legend</legend>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                        fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                        fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                        sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                </fieldset>
-            </div>
-            <div class="elements_group" data-name="Input types">
-                <form>
-                    <label>Text input</label>
-                    <input type="text" value="Text input" />
-                    <label>Email input</label>
-                    <input type="email" value="Email input" />
-                    <label>Telephone input</label>
-                    <input type="tel" value="0123456789" />
-                    <label>Number input</label>
-                    <input type="number" value="0123456789" />
-                    <label>Range input</label>
-                    <input type="range" min="0" max="10" value="6" />
-                    <label>Date input</label>
-                    <input type="date" value="01/01/2015" />
-                    <label>Datetime input</label>
-                    <input type="datetime" value="01/01/2015 00:00:00" />
-                    <label>Datetime-local input</label>
-                    <input type="datetime-local" value="01/01/2015 00:00:00" />
-                    <label>Time input</label>
-                    <input type="time" value="00:00:00" />
-                    <label>Month input</label>
-                    <input type="month" value="January" />
-                    <label>Week input</label>
-                    <input type="week" value="10" />
-                    <label>Color input</label>
-                    <input type="color" value="#8bc34a" />
-                    <label>Search input</label>
-                    <input type="search" value="Search text" />
-                    <label>URL input</label>
-                    <input type="url" value="https://www.google.com" />
-                    <label>Password input</label>
-                    <input type="password" value="Sample password" />
-                    <label>File input</label>
-                    <input type="file" />
-                </form>
-            </div>
-            <div class="elements_group" data-name="Form elements">
-                <label>Address Field</label>
-                <address>
-                    Sample address file<br />
-                    John Doe<br />
-                    Sample Avenue 101, 5th floor<br />
-                    (28001) Madrid, Spain
-                </address>
-                <label>Text Area</label>
-                <textarea>Sample text</textarea>
-                <label>Select</label>
-                <select>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Multi Select</label>
-                <select multiple="true" size="4">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="5">Option 5</option>
-                    <option value="6">Option 6</option>
-                </select>
-                <label>Select with option groups</label>
-                <select>
-                    <optgroup label="Option Group 1">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </optgroup>
-                    <optgroup label="Option Group 2">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </optgroup>
-                </select>
-                <label>Radio Buttons</label>
-                <input type="radio" value="radio_1" /> <label data-active-class="blue">Radio 1</label><br/>
-                <input type="radio" value="radio_2" /> <label class="red">Radio 2</label><br/>
-                <input type="radio" value="radio_3" /> <label data-hover-class="blue">Radio 3</label><br/>
-                <label>Checkboxes</label>
-                <input type="checkbox" value="check_1" /> <label>Checkbox 1</label><br/>
-                <input type="checkbox" value="check_2" /> <label class="red">Checkbox 2</label><br/>
-                <input type="checkbox" value="check_3" /> <label class="red_bg">Checkbox 3</label>
-            </div>
-        </section>
-        <section id="images">
-            <div class="elements_group" data-name="Images">
-                <img src="https://www.google.com/images/srpr/logo11w.png" alt="An example img" width="200" />
-                <img src="https://www.google.com/images/srpr/logo11w.png" class="thumbnail" alt="An example img" width="200" />
-                <img src="https://www.google.com/images/srpr/logo11w.png" class="photo" alt="An example img" width="200" />
-            </div>
-            <div class="elements_group" data-name="Picture">
-                <picture>
-                    <source media="(min-width: 64em)" src="https://www.google.com/images/srpr/logo11w.png">
-                    <source media="(min-width: 37.5em)" src="https://www.google.com/images/srpr/logo11w.png">
-                    <source src="https://www.google.com/images/srpr/logo11w.png">
-                    <img src="https://www.google.com/images/srpr/logo11w.png" alt="This picture loads on non-supporting browsers.">
-                </picture>
-            </div>
-            <div class="elements_group" data-name="Inline images">
-                <p><img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" width="200" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                    fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                    fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                    fermentum et. <img src="https://www.google.com/images/srpr/logo11w.png" alt="inline img" width="200" /> Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                    fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                    sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-            </div>
-        </section>
-        <section id="tables">
-            <div class="elements_group" data-name="Independent table">
-                <table cellspacing="0" cellpadding="0">
-                    <tr>
-                        <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-                    </tr>
-                    <tr>
-                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                    </tr>
-                    <tr class="even">
-                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                    </tr>
-                    <tr>
-                        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-        <section id="general_css_classes">
-            <div class="elements_group" data-name="CSS custom classes">
-                <pre><code>
-                .hide { display: none }
-                .hidden { display: none }
-                .show { display: block }
-                .invisible { visibility: hidden }
-                .wrapper { width: 960px; margin-left: auto; margin-right: auto; *zoom: 1 }
-                .left { float:left }
-                .right { float:right }
-                .clear { clear:both }
-                .center { text-align:center }
-                img.foto { border:4px solid #f4f4f4;outline:1px solid #ddd }
-                .lpadded{padding:10px}
-                .padded{padding:20px}
-                .lmarged{margin:10px 0 0 10px}
-                .marged{margin:20px 0 0 20px}
-
-                .col1, .col2, .col3, .col23, .col4, .col24, .col34, .col5, .col25, .col35, .col45
-                .roundedN
-                .btn
-                .disabled
-                </code></pre>
-            </div>
-        </section>
-        <section id="custom_styles">
-            <div class="elements_group" data-name="Modals">
-                <a href="javascript:void(0);" class="btn fab mini modal-open"><span class="mdi"></span></a>
-            </div>
-            <div class="elements_group" data-name="Buttons">
-                <div class="elements_group" data-name=".btn / .flat">
-                    <a href="javascript:void(0);" class="btn" data-hover-class="red_bg" data-active-class="green_bg">Sample link</a>
-                    <a href="javascript:void(0);" class="btn red">Sample link</a>
-                    <a href="javascript:void(0);" class="btn red_bg white">Sample link</a>
-                </div>
-                <div class="elements_group" data-name=".raised">
-                    <a href="javascript:void(0);" class="btn raised" data-hover-class="red_bg" data-active-class="green_bg">Sample link</a>
-                    <a href="javascript:void(0);" class="btn red raised">Sample link</a>
-                    <a href="javascript:void(0);" class="btn red_bg white raised">Sample link</a>
-                </div>
-                <div class="elements_group" data-name=".fab">
-                    <a href="javascript:void(0);" class="btn fab">F</a>
-                    <a href="javascript:void(0);" class="btn fab red_bg white">F</a>
-                    <a href="javascript:void(0);" class="btn fab mini red_bg white">F</a>
-                    <a href="javascript:void(0);" class="btn fab mini red_bg white"><span class="mdi"></span></a>
-                    <a href="javascript:void(0);" class="btn fab mini"><span class="mdi"></span></a>
-                    <a href="javascript:void(0);" class="btn fab mini" data-hover-class="red"><span class="mdi"></span></a>
-                </div>
-                <div class="elements_group" data-name=".fab.raised">
-                    <a href="javascript:void(0);" class="btn fab raised">F</a>
-                    <a href="javascript:void(0);" class="btn fab red_bg white raised ripple_white">F</a>
-                    <a href="javascript:void(0);" class="btn fab mini red_bg white raised">F</a>
-                </div>
-            </div>
-            <div class="elements_group" data-name="Paragraph alerts">
-                <p class="error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p class="alert"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p class="alert alert-success" data-hover-class="green_bg white"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p class="alert alert-info"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-                <p class="alert alert-error"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia sem eros, quis tempus elit 
-                fermentum et. Nullam libero ipsum, suscipit nec dui vitae, dictum congue arcu. Integer volutpat molestie 
-                fringilla. Cras commodo molestie neque, at sagittis eros porttitor quis. Quisque sagittis ac mauris non 
-                sollicitudin. Mauris ultrices sapien lorem, vitae facilisis lorem consectetur id.</p>
-            </div>
-        </section>
-    </body>
-</html>
