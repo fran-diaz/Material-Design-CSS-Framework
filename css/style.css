@@ -327,6 +327,12 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 .alert.alert-error {border-color:#ff4120;fill:#ff4120}
 .alert.alert-error b,.alert.alert-error strong {color:#ff4120}
 .error {border:3px solid red;background-color:rgba(255,0,0,0.3);color:rgba(0,0,0,.87);}
+.btn-success{background:#4caf50;color:#ffffff;}
+.btn-success:hover{background:#66bb6a;color:rgba(0, 0, 0, 0.87);}
+.btn-warning{background:#ffc107;color:#ffffff;}
+.btn-warning:hover{background:#ffca28;color:rgba(0, 0, 0, 0.87);}
+.btn-danger{background:#f44336;color:#ffffff;}
+.btn-danger:hover{background:#ef5350;color:rgba(0, 0, 0, 0.87);}
 
 /*Quick nav menu */
 #quick_nav{position:absolute;top:10%;left:10%;width:80%;max-height:80%;max-width:80%;overflow:auto;z-index:100000;}
@@ -336,13 +342,13 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 
 /* Modal Styles */
 #modal_back{background:rgba(0,0,0,.27);}
-#modal{position:relative;max-width:80%;max-height:80%;min-width:40%;border:1px solid rgba(0,0,0,.12);background:#fff;box-shadow:0px 0px 10px rgba(0,0,0,.8);}
+#modal{position:relative;max-width:80%;min-width:40%;min-height:60%;max-height:80%;height:400px;border:1px solid rgba(0,0,0,.12);background:#fff;box-shadow:0px 0px 10px rgba(0,0,0,.8);}
 #modal_head{position:relative;border-bottom:1px solid rgba(0,0,0,.12);cursor:move;line-height:2em;vertical-align: middle;}
 #modal_title{display:inline-block;font-size:1.25rem;line-height:2em;text-indent:16px;color:rgba(0,0,0,.87);margin-right:16px;}
 #modal_close{position:absolute;top:0;right:0;font-weight:700;}
-#modal_body{padding:16px;background:#ffffff;overflow:auto;}
+#modal_body{padding:16px;background:#ffffff;overflow:auto;<?=$_ITE->css->calc('height','100% - 2em')?>}
 #modal_body p:only-child{margin:0;}
-#modal_actions{position:absolute;bottom:0;left:0;width:100%;padding:16px;background:#ffffff;}
+#modal_actions{position:absolute;bottom:0;left:0;width:100%;padding:16px;background:#ffffff;border-top:1px solid rgba(0,0,0,.12);}
 
 /* Text colors: */
 .red {color:#f44336}
