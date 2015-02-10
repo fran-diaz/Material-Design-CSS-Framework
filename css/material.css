@@ -111,12 +111,12 @@ textarea{resize:vertical}
 input[type="search"]{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;}
 input[type="checkbox"],input[type="radio"]{display:inline;margin-right:.25em;display:none;box-shadow:0 0 0 0 rgba(255,255,255,0);}
 input[type="checkbox"] + label,input[type="radio"] + label{display:inline-block;text-indent:1.95rem;margin:.25em .75em;}
-input[type="checkbox"] + label:before,input[type="radio"] + label:before{color:rgba(0,0,0,.54);font-family:"Material-Design-Icons";font-weight:400;font-size:1.2rem;text-indent:0;border-radius:100%;content: "î£¢";cursor: pointer;display: block;height: 1.2rem;position: absolute;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;-webkit-transition: all .3s ease-in-out;transition: all .3s ease-in-out;width: 1.2rem;z-index: 1;}
+input[type="checkbox"] + label:before,input[type="radio"] + label:before{color:rgba(0,0,0,.54);font-family:"Material-Design-Icons";font-weight:400;font-size:1.2rem;text-indent:0;border-radius:100%;content: "";cursor: pointer;display: block;height: 1.2rem;position: absolute;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;-webkit-transition: all .3s ease-in-out;transition: all .3s ease-in-out;width: 1.2rem;z-index: 1;}
 input[type="checkbox"] + label:hover:before,input[type="radio"] + label:hover:before{}
 input[type="checkbox"] + label:active:before,input[type="radio"] + label:active:before,input[type="checkbox"] + label:focus:before,input[type="radio"] + label:focus:before{box-shadow:0 0 0 .75rem rgba(15,157,88,.5);}
-input[type="checkbox"] + label.checked:before{content:"î£¡";position:absolute;color:inherit;/*#0f9d58*/;}
-input[type="radio"] + label:before{font-family:"Material-Design-Icons";font-size:1.2rem;border-radius:100%;border:0;height:1.2rem;width:1.2rem;content:"î££";}
-input[type="radio"] + label.checked:before{color:inherit/*#0f9d58*/;content:"î£¤";text-indent:0;}
+input[type="checkbox"] + label.checked:before{content:"";position:absolute;color:inherit;/*#0f9d58*/;}
+input[type="radio"] + label:before{font-family:"Material-Design-Icons";font-size:1.2rem;border-radius:100%;border:0;height:1.2rem;width:1.2rem;content:"";}
+input[type="radio"] + label.checked:before{color:inherit/*#0f9d58*/;content:"";text-indent:0;}
 input[type="checkbox"] + label span,input[type="radio"] + label span{color:rgba(0,0,0,.87);}
 input[type="file"]{width:100%}
 select{width:auto;max-width:100%;margin-bottom:1em}
