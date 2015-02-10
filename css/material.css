@@ -934,6 +934,7 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 
 /* All under 960px width */
 @media only screen and (max-width: 959px) {
+    #btn_quick_nav{display:inline-block;}
     html, body{font-size:0.8em;}
     .col2,.col3,.col4,.col5,.col6,.col23,.col24,.col34,.col25,.col35,.col45,.col26,.col36,.col46,.col56{width:100%;}
     .col2.marged,.col3.marged,.col4.marged,.col5.marged,.col6.marged,.col23.marged,.col24.marged,.col34.marged,.col25.marged,.col35.marged,.col45.marged,.col26.marged,.col36.marged,.col46.marged,.col56.marged{width:calc(100% - 60px);width:-moz-calc(100% - 60px);width:-webkit-calc(100% - 60px);}
