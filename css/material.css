@@ -285,17 +285,6 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 .clearfix {*zoom: 1;}
 .clearfix:before, .clearfix:after {display: table;content: "";}
 .clearfix:after { clear: both;}
-.noscroll{overflow:hidden;}
-.no-margin,.no-marged{margin:0;}
-.no-margin-top,.no-marged-top{margin-top:0;}
-.no-margin-bottom,.no-marged-bottom{margin-bottom:0;}
-.no-margin-left,.no-marged-left{margin-left:0;}
-.no-margin-right,.no-marged-right{margin-right:0;}
-.no-padding,.no-padded{padding:0;}
-.no-padding-top,.no-padded-top{padding-top:0;}
-.no-padding-bottom,.no-padded-bottom{padding-bottom:0;}
-.no-padding-left,.no-padded-left{padding-left:0;}
-.no-padding-right,.no-padded-right{padding-right:0;}
 .clear{margin:0;clear:both;}
 .hidden{display:none;}
 .photo{background:#f4f4f4;border:1px solid #ddd;padding:4px;max-width:calc(100% - 10px);max-width:-moz-calc(100% - 10px);max-width:-webkit-calc(100% - 10px);}
@@ -309,6 +298,17 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 .lmarged.right{margin:15px 15px 0 0;}
 .full-marged{margin:30px;}
 .full-lmarged{margin:15px;}
+.noscroll{overflow:hidden;}
+.no-margin,.no-marged{margin:0;}
+.no-margin-top,.no-marged-top{margin-top:0;}
+.no-margin-bottom,.no-marged-bottom{margin-bottom:0;}
+.no-margin-left,.no-marged-left{margin-left:0;}
+.no-margin-right,.no-marged-right{margin-right:0;}
+.no-padding,.no-padded{padding:0;}
+.no-padding-top,.no-padded-top{padding-top:0;}
+.no-padding-bottom,.no-padded-bottom{padding-bottom:0;}
+.no-padding-left,.no-padded-left{padding-left:0;}
+.no-padding-right,.no-padded-right{padding-right:0;}
 .rounded{-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
 .rounded1{-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;}
 .rounded2{-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;}
@@ -338,7 +338,7 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 #quick_nav{position:absolute;top:10%;left:10%;width:80%;max-height:80%;max-width:80%;overflow:auto;z-index:100000;}
 #quick_nav a{display:block;font-size:1rem;line-height:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);}
 #quick_nav a:last-child{border:0;}
-#btn_quick_nav{font-size:2rem;min-width:auto;}
+#btn_quick_nav{font-size:2rem;min-width:auto;position:fixed;top:0;left:0;z-index:300;}
 
 /* Modal Styles */
 #modal_back{background:rgba(0,0,0,.27);}
