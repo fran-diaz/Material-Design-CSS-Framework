@@ -69,21 +69,13 @@ $(document).on('click','input[type="checkbox"] + label',function(e){
 /* ---------------------- */
 
 $(document).on('click','input[type="radio"] + label',function(e){
-    if($(this).hasClass('checked')){
-        if($(this).data('active-class') !== undefined){
-            $(this).html($(this).find('span').text());
-            $(this).removeClass($(this).data('active-class'));
-        }
-        $(this).removeClass('checked');
-        $(this).prev('input[type="radio"]').prop('checked',false);
-    }else{
-        if($(this).data('active-class') !== undefined){
-            $(this).html('<span>'+$(this).text()+'</span>');
-            $(this).addClass($(this).data('active-class'));
-        }
-        $(this).addClass('checked '+$(this).data('active-class'));
-        $(this).prev('input[type="radio"]').prop('checked',true);
-    }
+    name = $(this).prev('input[type="radio"]').attr('name');
+    if(name === undefined){alert("Radio failed, attribute 'name' not found.");}
+    $(this).closest('form').find('input[type="radio"][name='+name+']').each(function(index,element){
+        $(element).prop('checked',false);
+        $(element).next('label').removeClass('checked');
+    });
+    $(this).addClass('checked').prev('input[type="radio"]').prop('checked',true);
 });
 
 /* --------------------------------- */

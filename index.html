@@ -37,6 +37,52 @@
             .color:nth-child(n+12){color:#232323;}
             .left{float:left;}
             .right{float:right;}
+            
+            .cursors .auto            { cursor: auto; }
+            .cursors .deafult         { cursor: default; }
+            .cursors .none            { cursor: none; }
+            .cursors .context-menu    { cursor: context-menu; }
+            .cursors .help            { cursor: help; }
+            .cursors .pointer         { cursor: pointer; }
+            .cursors .progress        { cursor: progress; }
+            .cursors .wait            { cursor: wait; }
+            .cursors .cell            { cursor: cell; }
+            .cursors .crosshair       { cursor: crosshair; }
+            .cursors .text            { cursor: text; }
+            .cursors .vertical-text   { cursor: vertical-text; }
+            .cursors .alias           { cursor: alias; }
+            .cursors .copy            { cursor: copy; }
+            .cursors .move            { cursor: move; }
+            .cursors .no-drop         { cursor: no-drop; }
+            .cursors .not-allowed     { cursor: not-allowed; }
+            .cursors .all-scroll      { cursor: all-scroll; }
+            .cursors .col-resize      { cursor: col-resize; }
+            .cursors .row-resize      { cursor: row-resize; }
+            .cursors .n-resize        { cursor: n-resize; }
+            .cursors .e-resize        { cursor: e-resize; }
+            .cursors .s-resize        { cursor: s-resize; }
+            .cursors .w-resize        { cursor: w-resize; }
+            .cursors .ns-resize       { cursor: ns-resize; }
+            .cursors .ew-resize       { cursor: ew-resize; }
+            .cursors .ne-resize       { cursor: ne-resize; }
+            .cursors .nw-resize       { cursor: nw-resize; }
+            .cursors .se-resize       { cursor: se-resize; }
+            .cursors .sw-resize       { cursor: sw-resize; }
+            .cursors .nesw-resize     { cursor: nesw-resize; }
+            .cursors .nwse-resize     { cursor: nwse-resize; }
+            
+            .cursors > div {
+               float: left;
+               box-sizing: border-box;
+               width: 20%;
+               padding: 10px 2px;
+               text-align: center;  
+               white-space: nowrap;
+               border:1px dotted #ddd;
+            }
+            .cursors > div:hover{background:#bbdefb;}
+            
+            div[data-name="grid sizes"] div{border:1px dotted #ddd;min-height:3em;}
         </style>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -259,13 +305,13 @@
                     </optgroup>
                 </select>
                 <label>Radio Buttons</label>
-                <input type="radio" value="radio_1" /> <label data-active-class="blue">Radio 1</label><br/>
-                <input type="radio" value="radio_2" /> <label class="red">Radio 2</label><br/>
-                <input type="radio" value="radio_3" /> <label data-hover-class="blue">Radio 3</label><br/>
+                <input type="radio" name="rdio_ex" value="radio_1" /> <label data-active-class="blue">Radio 1</label><br/>
+                <input type="radio" name="rdio_ex" value="radio_2" /> <label class="red">Radio 2</label><br/>
+                <input type="radio" name="rdio_ex" value="radio_3" /> <label data-hover-class="blue">Radio 3</label><br/>
                 <label>Checkboxes</label>
-                <input type="checkbox" value="check_1" /> <label>Checkbox 1</label><br/>
-                <input type="checkbox" value="check_2" /> <label class="red">Checkbox 2</label><br/>
-                <input type="checkbox" value="check_3" /> <label class="red_bg">Checkbox 3</label>
+                <input type="checkbox" name="chk_ex" value="check_1" /> <label>Checkbox 1</label><br/>
+                <input type="checkbox" name="chk_ex" value="check_2" /> <label class="red">Checkbox 2</label><br/>
+                <input type="checkbox" name="chk_ex" value="check_3" /> <label class="red_bg">Checkbox 3</label>
             </div>
         </section>
         <section id="images">
