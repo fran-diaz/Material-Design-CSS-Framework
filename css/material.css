@@ -948,8 +948,8 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
     .photo{text-align:center;}
     .photo.left{float:none;}
     .photo.right{float:none;}
-    .padded{padding:0;}
-    .lpadded{padding:0;}
+    .padded:not(.mobile-padded){padding:0;}
+    .lpadded:not(.mobile-lpadded){padding:0;}
 }
 
 /* All under 600px width */
