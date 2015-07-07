@@ -354,7 +354,7 @@ div.ripple_white{display:block;height:2px;width:2px;border-radius:100%;position:
 #modal_close{position:absolute;top:0;right:0;font-weight:700;}
 #modal_body{padding:16px;background:#ffffff;overflow:auto;height:calc(100% - 2em - 1px);height:-moz-calc(100% - 2em - 1px);height:-webkit-calc(100% - 2em - 1px);}
 #modal_body p:only-child{margin:0;}
-#modal_body img.zoomed,#modal_body img:only-child{<?=$_ITE->css->calc('max-height','100% - 32px')?>display:block;margin:0 auto;}
+#modal_body img.zoomed,#modal_body img:only-child{max-height:calc(100% - 32px);max-height:-moz-calc(100% - 32px);max-height:-webkit-calc(100% - 32px);display:block;margin:0 auto;}
 #modal_actions{position:absolute;bottom:0;left:0;width:100%;padding:16px;background:#ffffff;border-top:1px solid rgba(0,0,0,.12);}
 
 /* Text colors: */
