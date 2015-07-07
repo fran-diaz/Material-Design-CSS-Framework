@@ -72,7 +72,9 @@ td,th{padding:0}
 button, input[type="submit"] {-webkit-font-smoothing:antialiased;font-size:1em;font-weight:bold;line-height:1em;}
 
 /* General */
-html,body{margin:0;padding:0;height:100%;color:rgba(0,0,0,.87);font-weight:300;font-family:"RobotoDraft","Roboto","Noto",sans-serif;font-size:1em;line-height:1.1em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#f9f9f9}
+html,body{margin:0;padding:0;color:rgba(0,0,0,.87);font-weight:300;font-family:"RobotoDraft","Roboto","Noto",sans-serif;font-size:1em;line-height:1.1em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:#f9f9f9}
+html{height:100%;}
+body{min-height:100%;}
 h1,h2,h3,h4,h5,h6{font-family:"RobotoDraft","Roboto",sans-serif;font-weight:300;margin:0;text-rendering:optimizeLegibility;letter-spacing:-0.01em;}
 h1{font-size:2.125rem;line-height:1.1em;color:rgba(0,0,0,.54);} 
 h2{font-size:1.5rem;line-height:1.1em;color:rgba(0,0,0,.87);} 
