@@ -88,7 +88,7 @@
         </style>
         <script type="text/javascript">
             $(document).ready(function(){
-                $.get('custom_styles.html','html',function(data){
+                $.get('https://raw.githack.com/fran-diaz/Material-Design-CSS-Framework/master/custom_styles.html','html',function(data){
                     $('body').append(data);
                     sections = $('body > section');
                     $('body').prepend('<span id="suite_title">CSS Styles Test Suite<span id="suite_version" class="right">v 1.1 - <a href="https://github.com/fran-diaz/Material-Design-CSS-Framework" target="_blank">Github</a></span></span><nav></nav>');
